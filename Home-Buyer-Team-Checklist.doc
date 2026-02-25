@@ -1,0 +1,160 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>The Home Buyer Team - Page Review Form</title>
+<style>
+    body { font-family: "Segoe UI", Arial, sans-serif; background: #f4f6fb; color: #0b3d73; }
+    h1 { color: #0b3d73; }
+    .header { background: #04153e; color: #fff; padding: 16px 20px; border-radius: 12px; }
+    .header h1 { color: #fff; margin: 0 0 6px 0; }
+    .accent { color: #f7c948; font-weight: 700; }
+    .section-title { background: #0b3d73; color: #fff; padding: 10px 14px; border-radius: 10px; margin-top: 22px; font-size: 16px; font-weight: 700; }
+    .table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+    .table td { padding: 6px 8px; vertical-align: top; }
+    .label { width: 48%; font-weight: 600; }
+    .field input { width: 100%; border: 1px solid #0b3d73; padding: 6px 8px; border-radius: 6px; }
+    .field textarea { width: 100%; border: 1px solid #0b3d73; padding: 6px 8px; border-radius: 6px; min-height: 70px; }
+    .note { font-size: 12px; color: #0b3d73; opacity: 0.8; }
+</style>
+</head>
+<body>
+    <div class="header">
+        <h1>The Home Buyer Team - Page Review Form</h1>
+        <div class="accent">Client Fill-Out Checklist</div>
+    </div>
+
+    <table class="table">
+        <tr>
+            <td class="label">Project</td>
+            <td class="field"><input type="text" /></td>
+        </tr>
+        <tr>
+            <td class="label">Date</td>
+            <td class="field"><input type="text" /></td>
+        </tr>
+        <tr>
+            <td class="label">Reviewer</td>
+            <td class="field"><input type="text" /></td>
+        </tr>
+        <tr>
+            <td class="label">Client Name</td>
+            <td class="field"><input type="text" /></td>
+        </tr>
+    </table>
+
+    <div class="section-title">Global (All Pages)</div>
+    <table class="table">
+        <tr><td class="label">Logo links to Home</td><td class="field"><input type="text" /></td></tr>
+        <tr><td class="label">Nav links work (Home/About/FAQ/Contact)</td><td class="field"><input type="text" /></td></tr>
+        <tr><td class="label">Resources dropdown links work</td><td class="field"><input type="text" /></td></tr>
+        <tr><td class="label">Top bar phone tap-to-call works</td><td class="field"><input type="text" /></td></tr>
+        <tr><td class="label">Nav address "Get Offer" works</td><td class="field"><input type="text" /></td></tr>
+        <tr><td class="label">Mobile menu opens/closes</td><td class="field"><input type="text" /></td></tr>
+        <tr><td class="label">Footer present/readable</td><td class="field"><input type="text" /></td></tr>
+        <tr><td class="label">Images load/sharp</td><td class="field"><input type="text" /></td></tr>
+        <tr><td class="label">Spelling/grammar approved</td><td class="field"><input type="text" /></td></tr>
+        <tr><td class="label">Offer modal works end-to-end (if present)</td><td class="field"><input type="text" /></td></tr>
+    </table>
+
+    <div class="section-title">Home (index.html)</div>
+    <table class="table">
+        <tr><td class="label">Hero message approved</td><td class="field"><input type="text" /></td></tr>
+        <tr><td class="label">Hero CTA works</td><td class="field"><input type="text" /></td></tr>
+        <tr><td class="label">As-seen logos display</td><td class="field"><input type="text" /></td></tr>
+        <tr><td class="label">4-step process reads clearly</td><td class="field"><input type="text" /></td></tr>
+        <tr><td class="label">Strategy card + modal works</td><td class="field"><input type="text" /></td></tr>
+        <tr><td class="label">Strategy report form works</td><td class="field"><input type="text" /></td></tr>
+        <tr><td class="label">Support cards read clearly</td><td class="field"><input type="text" /></td></tr>
+        <tr><td class="label">Equity Audit slider updates values</td><td class="field"><input type="text" /></td></tr>
+        <tr><td class="label">Testimonials approved</td><td class="field"><input type="text" /></td></tr>
+        <tr><td class="label">"Ready when you are" CTA works</td><td class="field"><input type="text" /></td></tr>
+    </table>
+
+    <div class="section-title">About (about.html)</div>
+    <table class="table">
+        <tr><td class="label">Hero message approved</td><td class="field"><input type="text" /></td></tr>
+        <tr><td class="label">Our Story text approved</td><td class="field"><input type="text" /></td></tr>
+        <tr><td class="label">Stats approved</td><td class="field"><input type="text" /></td></tr>
+        <tr><td class="label">Mission statement approved</td><td class="field"><input type="text" /></td></tr>
+        <tr><td class="label">Why Choose Us text approved</td><td class="field"><input type="text" /></td></tr>
+        <tr><td class="label">Testimonials approved</td><td class="field"><input type="text" /></td></tr>
+        <tr><td class="label">CTA section works</td><td class="field"><input type="text" /></td></tr>
+    </table>
+
+    <div class="section-title">Contact (contact.html)</div>
+    <table class="table">
+        <tr><td class="label">Phone link correct</td><td class="field"><input type="text" /></td></tr>
+        <tr><td class="label">Email link correct</td><td class="field"><input type="text" /></td></tr>
+        <tr><td class="label">Address correct</td><td class="field"><input type="text" /></td></tr>
+        <tr><td class="label">Contact form fields work</td><td class="field"><input type="text" /></td></tr>
+        <tr><td class="label">Submit message appears</td><td class="field"><input type="text" /></td></tr>
+        <tr><td class="label">Testimonials approved</td><td class="field"><input type="text" /></td></tr>
+    </table>
+
+    <div class="section-title">FAQ (faq.html)</div>
+    <table class="table">
+        <tr><td class="label">FAQ toggles open/close</td><td class="field"><input type="text" /></td></tr>
+        <tr><td class="label">All questions/answers approved</td><td class="field"><input type="text" /></td></tr>
+        <tr><td class="label">CTA buttons work</td><td class="field"><input type="text" /></td></tr>
+        <tr><td class="label">Phone CTA visible/correct</td><td class="field"><input type="text" /></td></tr>
+    </table>
+
+    <div class="section-title">Foreclosure (foreclosure.html)</div>
+    <table class="table">
+        <tr><td class="label">Hero message approved</td><td class="field"><input type="text" /></td></tr>
+        <tr><td class="label">Strategy card + modal works</td><td class="field"><input type="text" /></td></tr>
+        <tr><td class="label">As-seen logos display</td><td class="field"><input type="text" /></td></tr>
+        <tr><td class="label">4-step process reads clearly</td><td class="field"><input type="text" /></td></tr>
+        <tr><td class="label">Support cards read clearly</td><td class="field"><input type="text" /></td></tr>
+        <tr><td class="label">Equity Audit slider updates values</td><td class="field"><input type="text" /></td></tr>
+        <tr><td class="label">Testimonials approved</td><td class="field"><input type="text" /></td></tr>
+        <tr><td class="label">"Ready when you are" CTA works</td><td class="field"><input type="text" /></td></tr>
+    </table>
+
+    <div class="section-title">Probate (probate.html)</div>
+    <table class="table">
+        <tr><td class="label">Hero message approved</td><td class="field"><input type="text" /></td></tr>
+        <tr><td class="label">Strategy card + modal works</td><td class="field"><input type="text" /></td></tr>
+        <tr><td class="label">As-seen logos display</td><td class="field"><input type="text" /></td></tr>
+        <tr><td class="label">4-step process reads clearly</td><td class="field"><input type="text" /></td></tr>
+        <tr><td class="label">Support cards read clearly</td><td class="field"><input type="text" /></td></tr>
+        <tr><td class="label">Equity Audit slider updates values</td><td class="field"><input type="text" /></td></tr>
+        <tr><td class="label">Testimonials approved</td><td class="field"><input type="text" /></td></tr>
+        <tr><td class="label">"Ready when you are" CTA works</td><td class="field"><input type="text" /></td></tr>
+    </table>
+
+    <div class="section-title">Divorce (divorce.html)</div>
+    <table class="table">
+        <tr><td class="label">Hero message approved</td><td class="field"><input type="text" /></td></tr>
+        <tr><td class="label">Strategy card + modal works</td><td class="field"><input type="text" /></td></tr>
+        <tr><td class="label">As-seen logos display</td><td class="field"><input type="text" /></td></tr>
+        <tr><td class="label">4-step process reads clearly</td><td class="field"><input type="text" /></td></tr>
+        <tr><td class="label">Support cards read clearly</td><td class="field"><input type="text" /></td></tr>
+        <tr><td class="label">Equity Audit slider updates values</td><td class="field"><input type="text" /></td></tr>
+        <tr><td class="label">Testimonials approved</td><td class="field"><input type="text" /></td></tr>
+        <tr><td class="label">"Ready when you are" CTA works</td><td class="field"><input type="text" /></td></tr>
+    </table>
+
+    <div class="section-title">Landlord (landlord.html)</div>
+    <table class="table">
+        <tr><td class="label">Hero message approved</td><td class="field"><input type="text" /></td></tr>
+        <tr><td class="label">Strategy card + modal works</td><td class="field"><input type="text" /></td></tr>
+        <tr><td class="label">As-seen logos display</td><td class="field"><input type="text" /></td></tr>
+        <tr><td class="label">4-step process reads clearly</td><td class="field"><input type="text" /></td></tr>
+        <tr><td class="label">Support cards read clearly</td><td class="field"><input type="text" /></td></tr>
+        <tr><td class="label">Equity Audit slider updates values</td><td class="field"><input type="text" /></td></tr>
+        <tr><td class="label">Testimonials approved</td><td class="field"><input type="text" /></td></tr>
+        <tr><td class="label">"Ready when you are" CTA works</td><td class="field"><input type="text" /></td></tr>
+    </table>
+
+    <div class="section-title">Notes / Issues</div>
+    <table class="table">
+        <tr><td class="field"><textarea></textarea></td></tr>
+        <tr><td class="field"><textarea></textarea></td></tr>
+        <tr><td class="field"><textarea></textarea></td></tr>
+    </table>
+
+    <p class="note">Tip: Open this file in Word, fill in the fields, then Save As PDF to share. Word will allow editing of the fields in the document.</p>
+</body>
+</html>

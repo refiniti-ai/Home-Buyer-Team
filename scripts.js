@@ -1,10 +1,98 @@
 document.addEventListener('DOMContentLoaded', () => {
     const navToggle = document.querySelector('.nav-toggle');
     const navLinks = document.querySelector('.nav-links');
+    const navClose = document.getElementById('close-nav');
+
+    const closeMenu = () => {
+        navToggle?.setAttribute('aria-expanded', 'false');
+        navLinks?.classList.remove('open');
+        document.body.style.overflow = '';
+    };
+
+    const openMenu = () => {
+        navToggle?.setAttribute('aria-expanded', 'true');
+        navLinks?.classList.add('open');
+        document.body.style.overflow = 'hidden';
+    };
+
     navToggle?.addEventListener('click', () => {
         const expanded = navToggle.getAttribute('aria-expanded') === 'true';
-        navToggle.setAttribute('aria-expanded', String(!expanded));
-        navLinks?.classList.toggle('open');
+        if (expanded) closeMenu(); else openMenu();
+    });
+
+    navClose?.addEventListener('click', closeMenu);
+
+    // Close menu on overlay click (if we had one, but let's at least close on link click)
+    document.addEventListener('click', (e) => {
+        if (navLinks?.classList.contains('open') && 
+            !navLinks.contains(e.target) && 
+            !navToggle.contains(e.target)) {
+            closeMenu();
+        }
+    });
+
+    // Offer modal and steps (declare early so nav form can use them)
+    const modal = document.getElementById('offer-modal');
+    const modalSteps = Array.from(document.querySelectorAll('.offer-step'));
+    const progressSteps = Array.from(document.querySelectorAll('.progress-step'));
+    let activeStep = 0;
+
+    const showStep = (index) => {
+        activeStep = index;
+        modalSteps.forEach((step, idx) => {
+            step.classList.toggle('active', idx === index);
+        });
+        progressSteps.forEach((dot, idx) => {
+            dot.classList.toggle('active', idx <= index);
+        });
+    };
+
+    // Nav address form logic
+    const navAddressForm = document.getElementById('nav-address-form');
+    const navAddressInput = document.getElementById('nav-address-input');
+    const offerAddressInput = document.getElementById('offer-address');
+
+    navAddressForm?.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const address = navAddressInput?.value?.trim() || '';
+        if (offerAddressInput) offerAddressInput.value = address;
+        if (modal) {
+            modal.classList.add('active');
+            showStep(address ? 1 : 0);
+        }
+    });
+
+    // Dropdown toggle for sidebar/mobile
+    const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+    dropdownToggles.forEach(toggle => {
+        toggle.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            const parent = toggle.closest('.nav-item');
+            const menu = parent?.querySelector('.dropdown-menu');
+            
+            // Toggle active class on parent for the rotation of the + icon
+            parent?.classList.toggle('active');
+            
+            // Toggle display of the menu
+            if (menu) {
+                const isVisible = window.getComputedStyle(menu).display !== 'none';
+                menu.style.display = isVisible ? 'none' : 'block';
+            }
+            
+            const expanded = toggle.getAttribute('aria-expanded') === 'true';
+            toggle.setAttribute('aria-expanded', String(!expanded));
+        });
+    });
+
+    // Close menu on link click
+    const navLinkItems = document.querySelectorAll('.nav-links a:not(.dropdown-toggle)');
+    navLinkItems.forEach(item => {
+        item.addEventListener('click', () => {
+            navLinks?.classList.remove('open');
+            navToggle?.setAttribute('aria-expanded', 'false');
+            document.body.style.overflow = '';
+        });
     });
 
     document.querySelectorAll('.page-link').forEach(link => {
@@ -42,21 +130,6 @@ document.addEventListener('DOMContentLoaded', () => {
         event.target.reset();
     });
 
-    const modal = document.getElementById('offer-modal');
-    const modalSteps = Array.from(document.querySelectorAll('.offer-step'));
-    const progressSteps = Array.from(document.querySelectorAll('.progress-step'));
-    let activeStep = 0;
-
-    const showStep = (index) => {
-        activeStep = index;
-        modalSteps.forEach((step, idx) => {
-            step.classList.toggle('active', idx === index);
-        });
-        progressSteps.forEach((dot, idx) => {
-            dot.classList.toggle('active', idx <= index);
-        });
-    };
-
     const nextButtons = document.querySelectorAll('[data-next]');
     const prevButtons = document.querySelectorAll('[data-prev]');
 
@@ -92,6 +165,7 @@ document.addEventListener('DOMContentLoaded', () => {
         alert('Thank you! A specialist will contact you shortly.');
         modal?.classList.remove('active');
         event.target.reset();
+        showStep(0);
     });
 
     const planMatrix = {
@@ -157,12 +231,22 @@ document.addEventListener('DOMContentLoaded', () => {
         'You retain control while we deliver transparent funding, concierge communication, and a calm experience.'
     ];
 
+    const detectContextFromDetails = (text) => {
+        const lower = (text || '').toLowerCase();
+        if (/\b(foreclosure|auction|lender|default|notice of default)\b/.test(lower)) return 'foreclosure';
+        if (/\b(inherited|probate|estate|heir|executor|deceased)\b/.test(lower)) return 'probate';
+        if (/\b(divorce|split|settlement|ex-spouse)\b/.test(lower)) return 'divorce';
+        if (/\b(tenant|landlord|rental|rent|vacant)\b/.test(lower)) return 'landlord';
+        return 'general';
+    };
+
     const buildSnapshotData = (details, pageKey) => {
         const trimmed = details.trim();
         const focus = trimmed.split(/[\.\n]/).find(entry => entry.trim().length)?.trim() || 'Immediate liquidity needs';
-        const opportunity = opportunityMatrix[pageKey] || opportunityMatrix.general;
-        const insight = planInsights[pageKey] || planInsights.general;
-        const planSteps = planMatrix[pageKey] || planMatrix.general;
+        const effectiveKey = trimmed ? detectContextFromDetails(trimmed) : pageKey;
+        const opportunity = opportunityMatrix[effectiveKey] || opportunityMatrix.general;
+        const insight = planInsights[effectiveKey] || planInsights.general;
+        const planSteps = planMatrix[effectiveKey] || planMatrix.general;
         
         const htmlSummary = `
             <h3><span class="report-icon">🔍</span> Your Situation Analysis</h3>

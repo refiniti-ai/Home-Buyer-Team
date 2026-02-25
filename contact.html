@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | The Home Buyer Team</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="Images/The-home-buyer-team-favicon.png">
+    <style>
+        .contact-hero {
+            background: linear-gradient(135deg, #06214f, #0f2c6b);
+            padding: 9rem 1.5rem 6rem;
+            color: white;
+            text-align: center;
+        }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            max-width: 1100px;
+            margin: 4rem auto;
+            padding: 0 1.5rem;
+        }
+        .contact-info h2 {
+            color: var(--blue);
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .contact-method {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        .contact-icon {
+            background: var(--yellow);
+            color: var(--blue);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+        .contact-text h3 {
+            margin: 0 0 0.5rem;
+            font-size: 1.2rem;
+        }
+        .contact-text p {
+            margin: 0;
+            color: rgba(11, 61, 115, 0.8);
+        }
+        .contact-form-container {
+            background: #fff;
+            padding: 3rem;
+            border-radius: 2rem;
+            box-shadow: var(--card-glow);
+            border: 1px solid rgba(11, 61, 115, 0.05);
+        }
+        .contact-form-container h3 {
+            margin-top: 0;
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+        }
+        @media (max-width: 900px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <span>Need help? Call us 24/7:</span>
+        <a href="tel:8005554663">📞 (800) 555-HOME</a>
+    </div>
+    <header class="page-header">
+        <nav class="primary-nav" aria-label="Primary">
+            <a class="brand" href="index.html" aria-label="Home">
+                <img src="Images/The-home-buyer-team-logo.png" alt="The Home Buyer Team logo" class="brand-logo">
+            </a>
+            <div class="nav-desktop-links">
+                <a class="nav-link-desktop" href="index.html">Home</a>
+                <a class="nav-link-desktop" href="about.html">About</a>
+                <a class="nav-link-desktop" href="faq.html">FAQ</a>
+                <a class="nav-link-desktop" href="contact.html">Contact</a>
+            </div>
+            <form class="nav-address-form" id="nav-address-form">
+                <input type="text" placeholder="Enter street address" required id="nav-address-input">
+                <button type="submit" class="btn-nav-submit">Get Offer</button>
+            </form>
+
+            <div class="nav-right-actions">
+                <button class="nav-toggle" aria-expanded="false" aria-controls="primary-links" aria-label="Toggle navigation">
+                    <span class="hamburger"></span>
+                </button>
+            </div>
+
+            <div class="nav-links" id="primary-links">
+                <button class="nav-close" id="close-nav" aria-label="Close menu">&times;</button>
+                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link" href="about.html">About Us</a>
+                <a class="nav-link" href="faq.html">FAQ</a>
+                <a class="nav-link" href="contact.html">Contact Us</a>
+                <div class="nav-item">
+                    <button class="nav-link dropdown-toggle" aria-expanded="false">Resources</button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-link" href="foreclosure.html">Foreclosure</a>
+                        <a class="dropdown-link" href="probate.html">Probate</a>
+                        <a class="dropdown-link" href="divorce.html">Divorce</a>
+                        <a class="dropdown-link" href="landlord.html">Landlord</a>
+                    </div>
+                </div>
+                <button class="btn-primary open-offer" type="button" style="margin-top: 2rem; width: 100%;">Get Cash Offer Now</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact-hero">
+            <div class="section-inner">
+                <h1 class="section-title" style="color: white;">Get In Touch</h1>
+                <p style="color: rgba(255,255,255,0.9); max-width: 700px; margin: 0 auto;">Have questions? We're here to help you navigate your home sale with ease and transparency.</p>
+            </div>
+        </section>
+
+        <div class="contact-grid">
+            <div class="contact-info">
+                <h2>Contact Information</h2>
+                <p>Reach out to us through any of these channels. Our team is available 24/7 to assist you.</p>
+                
+                <div class="contact-method" style="margin-top: 3rem;">
+                    <div class="contact-icon">📞</div>
+                    <div class="contact-text">
+                        <h3>Phone</h3>
+                        <p><a href="tel:8005554663" style="color: inherit; font-weight: 700;">(800) 555-HOME</a></p>
+                        <p>Available 24/7 for immediate assistance.</p>
+                    </div>
+                </div>
+
+                <div class="contact-method">
+                    <div class="contact-icon">📧</div>
+                    <div class="contact-text">
+                        <h3>Email</h3>
+                        <p><a href="mailto:info@thehomebuyerteam.com" style="color: inherit; font-weight: 700;">info@thehomebuyerteam.com</a></p>
+                        <p>We typically respond within 1 business hour.</p>
+                    </div>
+                </div>
+
+                <div class="contact-method">
+                    <div class="contact-icon">📍</div>
+                    <div class="contact-text">
+                        <h3>Headquarters</h3>
+                        <p>500 Main Street</p>
+                        <p>Phoenix, AZ 85001</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form-container">
+                <h3>Send us a message</h3>
+                <form id="contact-page-form" class="strategy-report-form">
+                    <div class="form-row">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-row">
+                        <input type="email" name="email" placeholder="Email Address" required>
+                    </div>
+                    <div class="form-row">
+                        <input type="tel" name="phone" placeholder="Phone Number" required>
+                    </div>
+                    <div class="form-row">
+                        <textarea name="message" placeholder="How can we help you?" style="min-height: 120px; padding: 1rem; border-radius: 0.9rem; border: 2px solid #cbd5e0; font-family: inherit;" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary" style="width: 100%; margin-top: 1rem;">Send Message</button>
+                </form>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <img src="Images/The-home-buyer-team-logo.png" alt="Logo" style="height: 50px;">
+            <p>Licensed acquisition specialists providing immediate liquidity for residential property assets.</p>
+            <small>© 2026 The Home Buyer Team. All rights reserved.</small>
+        </div>
+    </footer>
+
+    <div class="modal-overlay" id="offer-modal">
+        <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+            <button class="modal-close" id="close-offer-modal" aria-label="Close form">&times;</button>
+            <h2 id="modal-title">Request an offer</h2>
+            <p>Complete the four-step form and we will call you with a firm cash offer.</p>
+            <div class="progress-bar">
+                <div class="progress-step active" data-index="0"><span>1</span><div>Get started</div></div>
+                <div class="progress-step" data-index="1"><span>2</span><div>Your situation</div></div>
+                <div class="progress-step" data-index="2"><span>3</span><div>Your home</div></div>
+                <div class="progress-step" data-index="3"><span>4</span><div>About you</div></div>
+            </div>
+            <form id="offer-form">
+                <div class="offer-step active" data-step="0">
+                    <div class="form-row">
+                        <input id="offer-address" name="address" type="text" placeholder="Enter your address" required>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn-ghost" data-prev disabled>Back</button>
+                        <button type="button" class="btn-primary" data-next>Next Step</button>
+                    </div>
+                </div>
+                <div class="offer-step" data-step="1">
+                    <div class="form-row">
+                        <select name="reason" required>
+                            <option value="">Reason for wanting to sell?</option>
+                            <option>Financial Hardship</option>
+                            <option>Inherited</option>
+                            <option>Relocating</option>
+                            <option>Downsizing</option>
+                            <option>Divorce</option>
+                            <option>Repairs/Damage</option>
+                            <option>Tired Landlord</option>
+                            <option>Just curious on value</option>
+                        </select>
+                    </div>
+                    <div class="form-row">
+                        <select name="timeline" required>
+                            <option value="">How soon would you like to sell?</option>
+                            <option>ASAP</option>
+                            <option>Within 3 Months</option>
+                            <option>Within 6 Months</option>
+                            <option>I'm in no rush</option>
+                        </select>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn-ghost" data-prev>Back</button>
+                        <button type="button" class="btn-primary" data-next>Next Step</button>
+                    </div>
+                </div>
+                <div class="offer-step" data-step="2">
+                    <div class="form-row">
+                        <textarea name="details" placeholder="Describe repairs, tenants, or liens" required></textarea>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn-ghost" data-prev>Back</button>
+                        <button type="button" class="btn-primary" data-next>Next Step</button>
+                    </div>
+                </div>
+                <div class="offer-step" data-step="3">
+                    <div class="form-row">
+                        <input name="full-name" type="text" placeholder="Name" required>
+                    </div>
+                    <div class="form-row">
+                        <input name="email" type="email" placeholder="Email" required>
+                    </div>
+                    <div class="form-row">
+                        <input name="phone" type="tel" placeholder="Phone" required>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn-ghost" data-prev>Back</button>
+                        <button type="submit" class="btn-primary">Get my offer</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+    <script>
+        document.getElementById('contact-page-form')?.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thank you for your message! A specialist will contact you shortly.');
+            e.target.reset();
+        });
+    </script>
+</body>
+</html>

@@ -5,60 +5,55 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Foreclosure Defense | The Home Buyer Team</title>
-    <meta name="description" content="Facing foreclosure? The Home Buyer Team settles your lender, cancels the auction, and delivers cash before the courthouse steps.">
-    <meta name="keywords" content="foreclosure rescue, stop auction, cash offer, lender negotiation">
-    <link rel="canonical" href="https://www.thehomebuyerteam.com/foreclosure">
-    <meta property="og:title" content="Foreclosure Defense | The Home Buyer Team">
-    <meta property="og:description" content="Stop the auction, pay the lender, and keep the equity you earned. We buy homes before they hit the courthouse steps.">
-    <meta property="og:image" content="Images/Home-Buyer-Roof-Lift.gif">
-    <meta property="og:url" content="https://www.thehomebuyerteam.com/foreclosure">
-    <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary_large_image">
+    <meta name="description" content="Facing foreclosure? We help you pause the auction, protect your credit, and walk away with cash.">
+    <meta name="keywords" content="stop foreclosure, sell house fast, cash buyer, foreclosure rescue">
     <link rel="icon" type="image/png" href="Images/The-home-buyer-team-favicon.png">
     <link rel="preload" as="image" href="Images/Home-Buyer-Freedom-Cut.gif">
     <link rel="stylesheet" href="styles.css">
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "RealEstateAgent",
-        "name": "The Home Buyer Team",
-        "url": "https://www.thehomebuyerteam.com/",
-        "logo": "https://www.thehomebuyerteam.com/Images/The-home-buyer-team-logo.png",
-        "description": "Cash home buyer specializing in distressed, probate, foreclosure and landlord sales.",
-        "telephone": "(800) 555-HOME",
-        "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "500 Main Street",
-            "addressLocality": "Dallas",
-            "addressRegion": "TX",
-            "postalCode": "75201",
-            "addressCountry": "US"
-        },
-        "sameAs": [
-            "https://www.facebook.com/thehomebuyerteam",
-            "https://www.linkedin.com/company/the-home-buyer-team"
-        ]
-    }
-    </script>
 </head>
 <body data-page="foreclosure">
+    <div class="top-bar">
+        <span>Need help? Call us 24/7:</span>
+        <a href="tel:8005554663">📞 (800) 555-HOME</a>
+    </div>
     <header class="page-header">
         <nav class="primary-nav" aria-label="Primary">
-            <a class="brand" href="index.html">
+            <a class="brand" href="index.html" aria-label="Home">
                 <img src="Images/The-home-buyer-team-logo.png" alt="The Home Buyer Team logo" class="brand-logo">
             </a>
-            <button class="nav-toggle" aria-expanded="false" aria-controls="primary-links">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-                    <path d="M4 7h16M4 12h16M4 17h16"/>
-                </svg>
-            </button>
+            <div class="nav-desktop-links">
+                <a class="nav-link-desktop" href="index.html">Home</a>
+                <a class="nav-link-desktop" href="about.html">About</a>
+                <a class="nav-link-desktop" href="faq.html">FAQ</a>
+                <a class="nav-link-desktop" href="contact.html">Contact</a>
+            </div>
+            <form class="nav-address-form" id="nav-address-form">
+                <input type="text" placeholder="Enter street address" required id="nav-address-input">
+                <button type="submit" class="btn-nav-submit">Get Offer</button>
+            </form>
+
+            <div class="nav-right-actions">
+                <button class="nav-toggle" aria-expanded="false" aria-controls="primary-links" aria-label="Toggle navigation">
+                    <span class="hamburger"></span>
+                </button>
+            </div>
+
             <div class="nav-links" id="primary-links">
-                <a class="nav-link page-link" data-page="general" href="index.html">General</a>
-                <a class="nav-link page-link" data-page="foreclosure" href="foreclosure.html">Foreclosure</a>
-                <a class="nav-link page-link" data-page="probate" href="probate.html">Probate</a>
-                <a class="nav-link page-link" data-page="divorce" href="divorce.html">Divorce</a>
-                <a class="nav-link page-link" data-page="landlord" href="landlord.html">Landlord</a>
-                <button class="btn-primary open-offer" type="button">Get Cash Offer</button>
+                <button class="nav-close" id="close-nav" aria-label="Close menu">&times;</button>
+                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link" href="about.html">About Us</a>
+                <a class="nav-link" href="faq.html">FAQ</a>
+                <a class="nav-link" href="contact.html">Contact Us</a>
+                <div class="nav-item">
+                    <button class="nav-link dropdown-toggle" aria-expanded="false">Resources</button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-link" href="foreclosure.html">Foreclosure</a>
+                        <a class="dropdown-link" href="probate.html">Probate</a>
+                        <a class="dropdown-link" href="divorce.html">Divorce</a>
+                        <a class="dropdown-link" href="landlord.html">Landlord</a>
+                    </div>
+                </div>
+                <button class="btn-primary open-offer" type="button" style="margin-top: 2rem; width: 100%;">Get Cash Offer Now</button>
             </div>
         </nav>
     </header>
@@ -68,8 +63,8 @@
             <div class="hero-grid">
                 <div class="hero-content">
                     <p class="badge-pill">Foreclosure defense</p>
-                    <h1 id="hero-heading">Stop the auction, settle your lender, and keep the equity you earned.</h1>
-                    <p>We negotiate with banks, freeze the sale, and deliver a cash offer that pulls your property off the courthouse steps.</p>
+                    <h1 id="hero-heading">Facing foreclosure? Pause the auction and protect the equity you earned.</h1>
+                    <p>We move before auctions escalate, honor banking deadlines, and reframe the lender conversation with transparent cash.</p>
                     <div class="hero-actions">
                         <button class="btn-primary open-offer" type="button">Request a cash offer</button>
                         <div class="hero-phone" aria-label="Call us">📞 (800) 555-HOME</div>

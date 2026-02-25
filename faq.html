@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ | The Home Buyer Team</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="Images/The-home-buyer-team-favicon.png">
+    <style>
+        .faq-hero {
+            background: linear-gradient(135deg, #06214f, #0f2c6b);
+            padding: 8rem 1.5rem 4rem;
+            color: white;
+            text-align: center;
+        }
+        .faq-container {
+            max-width: 900px;
+            margin: -2rem auto 4rem;
+            padding: 0 1.5rem;
+            position: relative;
+            z-index: 2;
+        }
+        .faq-item {
+            background: #fff;
+            border-radius: 1rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            overflow: hidden;
+            border: 1px solid rgba(11, 61, 115, 0.05);
+        }
+        .faq-question {
+            padding: 1.5rem 2rem;
+            width: 100%;
+            text-align: left;
+            background: none;
+            border: none;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--blue);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.3s;
+        }
+        .faq-question:hover {
+            background: var(--off-white);
+        }
+        .faq-answer {
+            padding: 0 2rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease-out;
+            color: rgba(11, 61, 115, 0.85);
+            line-height: 1.7;
+        }
+        .faq-item.active .faq-answer {
+            padding: 0 2rem 1.5rem;
+            max-height: 1000px;
+        }
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            transition: transform 0.3s;
+        }
+        .faq-item.active .faq-question::after {
+            transform: rotate(45deg);
+        }
+        .faq-cta {
+            text-align: center;
+            padding: 4rem 1.5rem;
+            background: var(--off-white);
+            border-radius: 2rem;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <span>Need help? Call us 24/7:</span>
+        <a href="tel:8005554663">📞 (800) 555-HOME</a>
+    </div>
+    <header class="page-header">
+        <nav class="primary-nav" aria-label="Primary">
+            <a class="brand" href="index.html" aria-label="Home">
+                <img src="Images/The-home-buyer-team-logo.png" alt="The Home Buyer Team logo" class="brand-logo">
+            </a>
+            <div class="nav-desktop-links">
+                <a class="nav-link-desktop" href="index.html">Home</a>
+                <a class="nav-link-desktop" href="about.html">About</a>
+                <a class="nav-link-desktop" href="faq.html">FAQ</a>
+                <a class="nav-link-desktop" href="contact.html">Contact</a>
+            </div>
+            <form class="nav-address-form" id="nav-address-form">
+                <input type="text" placeholder="Enter street address" required id="nav-address-input">
+                <button type="submit" class="btn-nav-submit">Get Offer</button>
+            </form>
+
+            <div class="nav-right-actions">
+                <button class="nav-toggle" aria-expanded="false" aria-controls="primary-links" aria-label="Toggle navigation">
+                    <span class="hamburger"></span>
+                </button>
+            </div>
+
+            <div class="nav-links" id="primary-links">
+                <button class="nav-close" id="close-nav" aria-label="Close menu">&times;</button>
+                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link" href="about.html">About Us</a>
+                <a class="nav-link" href="faq.html">FAQ</a>
+                <a class="nav-link" href="contact.html">Contact Us</a>
+                <div class="nav-item">
+                    <button class="nav-link dropdown-toggle" aria-expanded="false">Resources</button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-link" href="foreclosure.html">Foreclosure</a>
+                        <a class="dropdown-link" href="probate.html">Probate</a>
+                        <a class="dropdown-link" href="divorce.html">Divorce</a>
+                        <a class="dropdown-link" href="landlord.html">Landlord</a>
+                    </div>
+                </div>
+                <button class="btn-primary open-offer" type="button" style="margin-top: 2rem; width: 100%;">Get Cash Offer Now</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="faq-hero">
+            <div class="section-inner">
+                <h1 class="section-title" style="color: white;">Frequently Asked Questions</h1>
+                <p style="color: rgba(255,255,255,0.9);">Get answers to common questions about selling your house fast for cash.</p>
+            </div>
+        </section>
+
+        <div class="faq-container">
+            <div class="faq-item">
+                <button class="faq-question">Who is The Home Buyer Team?</button>
+                <div class="faq-answer">
+                    <p>The Home Buyer Team is a dedicated network of real estate investors and acquisition specialists. We specialize in helping homeowners who need to sell their properties quickly due to various life situations like foreclosure, probate, divorce, or tired landlord issues. Since our inception, we've helped hundreds of homeowners find relief with fast, fair cash offers.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">How does the house-buying process work?</button>
+                <div class="faq-answer">
+                    <p>Our process is simple and transparent:
+                        <br>1. <strong>Contact Us:</strong> Share your address and situation through our online form or by phone.
+                        <br>2. <strong>Get a Consultation:</strong> We'll review your property details and may schedule a quick visit.
+                        <br>3. <strong>Receive Your Offer:</strong> We'll provide a firm cash offer, often within 24 hours.
+                        <br>4. <strong>Close on Your Timeline:</strong> If you accept, we close at a reputable title company on the date you choose.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">What does selling "as-is" mean?</button>
+                <div class="faq-answer">
+                    <p>It means you don't have to lift a finger. No cleaning, no repairs, no painting, and no hauling away unwanted items. We buy the house exactly as it sits today. We take on the burden of all future repairs and renovations.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">Are there any fees or commissions?</button>
+                <div class="faq-answer">
+                    <p>No. Unlike traditional real estate agents, we don't charge any commissions or hidden fees. We even cover the typical closing costs. The offer we make is the amount you'll see on your closing statement.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">How do you determine the offer price?</button>
+                <div class="faq-answer">
+                    <p>We look at several factors: the current condition of the home, the cost of necessary repairs, the time it will take to renovate, and the recent sale prices of similar homes in your neighborhood. Our goal is to provide a fair offer that reflects the speed and convenience of a cash sale.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">Is there any obligation when I request an offer?</button>
+                <div class="faq-answer">
+                    <p>None at all. Requesting an offer and having us visit your property is completely free and carries no obligation. You are free to accept or decline our offer as you see fit.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">How fast can we close?</button>
+                <div class="faq-answer">
+                    <p>We can often close in as little as 7 to 14 days, depending on the title work. However, we work on your timeline—if you need more time to move or settle affairs, we can schedule the closing for a later date that works for you.</p>
+                </div>
+            </div>
+        </div>
+
+        <section class="faq-cta">
+            <div class="section-inner">
+                <h2>Still have questions?</h2>
+                <p>Our team is here to help you navigate your unique situation.</p>
+                <div class="hero-actions" style="justify-content: center; margin-top: 2rem;">
+                    <button class="btn-primary open-offer" type="button">Request a cash offer</button>
+                    <div class="hero-phone" style="background: rgba(11, 61, 115, 0.1); color: var(--blue);">📞 (800) 555-HOME</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <img src="Images/The-home-buyer-team-logo.png" alt="Logo" style="height: 50px;">
+            <p>Licensed acquisition specialists providing immediate liquidity for residential property assets.</p>
+            <small>© 2026 The Home Buyer Team. All rights reserved.</small>
+        </div>
+    </footer>
+
+    <div class="modal-overlay" id="offer-modal">
+        <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+            <button class="modal-close" id="close-offer-modal" aria-label="Close form">&times;</button>
+            <h2 id="modal-title">Request an offer</h2>
+            <p>Complete the four-step form and we will call you with a firm cash offer.</p>
+            <div class="progress-bar">
+                <div class="progress-step active" data-index="0"><span>1</span><div>Get started</div></div>
+                <div class="progress-step" data-index="1"><span>2</span><div>Your situation</div></div>
+                <div class="progress-step" data-index="2"><span>3</span><div>Your home</div></div>
+                <div class="progress-step" data-index="3"><span>4</span><div>About you</div></div>
+            </div>
+            <form id="offer-form">
+                <div class="offer-step active" data-step="0">
+                    <div class="form-row">
+                        <input id="offer-address" name="address" type="text" placeholder="Enter your address" required>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn-ghost" data-prev disabled>Back</button>
+                        <button type="button" class="btn-primary" data-next>Next Step</button>
+                    </div>
+                </div>
+                <div class="offer-step" data-step="1">
+                    <div class="form-row">
+                        <select name="reason" required>
+                            <option value="">Reason for wanting to sell?</option>
+                            <option>Financial Hardship</option>
+                            <option>Inherited</option>
+                            <option>Relocating</option>
+                            <option>Downsizing</option>
+                            <option>Divorce</option>
+                            <option>Repairs/Damage</option>
+                            <option>Tired Landlord</option>
+                            <option>Just curious on value</option>
+                        </select>
+                    </div>
+                    <div class="form-row">
+                        <select name="timeline" required>
+                            <option value="">How soon would you like to sell?</option>
+                            <option>ASAP</option>
+                            <option>Within 3 Months</option>
+                            <option>Within 6 Months</option>
+                            <option>I'm in no rush</option>
+                        </select>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn-ghost" data-prev>Back</button>
+                        <button type="button" class="btn-primary" data-next>Next Step</button>
+                    </div>
+                </div>
+                <div class="offer-step" data-step="2">
+                    <div class="form-row">
+                        <textarea name="details" placeholder="Describe repairs, tenants, or liens" required></textarea>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn-ghost" data-prev>Back</button>
+                        <button type="button" class="btn-primary" data-next>Next Step</button>
+                    </div>
+                </div>
+                <div class="offer-step" data-step="3">
+                    <div class="form-row">
+                        <input name="full-name" type="text" placeholder="Name" required>
+                    </div>
+                    <div class="form-row">
+                        <input name="email" type="email" placeholder="Email" required>
+                    </div>
+                    <div class="form-row">
+                        <input name="phone" type="tel" placeholder="Phone" required>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn-ghost" data-prev>Back</button>
+                        <button type="submit" class="btn-primary">Get my offer</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+    <script>
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const item = button.parentElement;
+                item.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>
