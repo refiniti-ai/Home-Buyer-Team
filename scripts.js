@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('click', (e) => {
         if (navLinks?.classList.contains('open') && 
             !navLinks.contains(e.target) && 
-            !navToggle.contains(e.target)) {
+            !(navToggle && navToggle.contains(e.target))) {
             closeMenu();
         }
     });
@@ -47,20 +47,29 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
 
-    // Nav address form logic
+    // Nav and hero address form logic
     const navAddressForm = document.getElementById('nav-address-form');
     const navAddressInput = document.getElementById('nav-address-input');
+    const heroAddressForm = document.getElementById('hero-address-form');
+    const heroAddressInput = document.getElementById('hero-address-input');
     const offerAddressInput = document.getElementById('offer-address');
 
-    navAddressForm?.addEventListener('submit', (e) => {
+    const handleAddressFormSubmit = (e, addressInput) => {
         e.preventDefault();
-        const address = navAddressInput?.value?.trim() || '';
+        const address = addressInput?.value?.trim() || '';
         if (offerAddressInput) offerAddressInput.value = address;
         if (modal) {
             modal.classList.add('active');
             showStep(address ? 1 : 0);
         }
-    });
+    };
+
+    navAddressForm?.addEventListener('submit', (e) => handleAddressFormSubmit(e, navAddressInput));
+    heroAddressForm?.addEventListener('submit', (e) => handleAddressFormSubmit(e, heroAddressInput));
+
+    const bottomCtaForm = document.getElementById('bottom-cta-form');
+    const bottomCtaInput = document.getElementById('bottom-cta-address-input');
+    bottomCtaForm?.addEventListener('submit', (e) => handleAddressFormSubmit(e, bottomCtaInput));
 
     // Dropdown toggle for sidebar/mobile
     const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
@@ -496,5 +505,19 @@ document.addEventListener('DOMContentLoaded', () => {
             strategyStatus.style.color = 'green';
         }
     });
+
+    // Image carousel - infinite auto-scroll (duplicate cards for seamless loop)
+    const carouselTrack = document.getElementById('image-carousel-track');
+    const carouselPrev = document.getElementById('carousel-prev');
+    const carouselNext = document.getElementById('carousel-next');
+
+    if (carouselTrack) {
+        // Duplicate cards for seamless infinite scroll
+        const cards = carouselTrack.querySelectorAll('.carousel-card');
+        cards.forEach((card) => {
+            const clone = card.cloneNode(true);
+            carouselTrack.appendChild(clone);
+        });
+    }
 });
 

@@ -3,76 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | The Home Buyer Team</title>
+    <title>Equity Audit | The Home Buyer Team</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/png" href="Images/The-home-buyer-team-favicon.png">
-    <style>
-        .contact-hero {
-            background: linear-gradient(135deg, #1a4a6e, #2563a8);
-            padding: 9rem 1.5rem 6rem;
-            color: white;
-            text-align: center;
-        }
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            max-width: 1100px;
-            margin: 4rem auto;
-            padding: 0 1.5rem;
-        }
-        .contact-info h2 {
-            color: var(--blue);
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-        }
-        .contact-method {
-            display: flex;
-            align-items: flex-start;
-            gap: 1.5rem;
-            margin-bottom: 2rem;
-        }
-        .contact-icon {
-            background: var(--yellow);
-            color: var(--blue);
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            flex-shrink: 0;
-        }
-        .contact-text h3 {
-            margin: 0 0 0.5rem;
-            font-size: 1.2rem;
-        }
-        .contact-text p {
-            margin: 0;
-            color: rgba(11, 61, 115, 0.8);
-        }
-        .contact-form-container {
-            background: #fff;
-            padding: 3rem;
-            border-radius: 2rem;
-            box-shadow: var(--card-glow);
-            border: 1px solid rgba(11, 61, 115, 0.05);
-        }
-        .contact-form-container h3 {
-            margin-top: 0;
-            margin-bottom: 1.5rem;
-            font-size: 1.8rem;
-        }
-        @media (max-width: 900px) {
-            .contact-grid {
-                grid-template-columns: 1fr;
-                gap: 3rem;
-            }
-        }
-    </style>
 </head>
-<body>
+<body data-page="general">
     <div class="top-bar">
         <span>Need help? Call us 24/7:</span>
         <a href="tel:8005554663">📞 (800) 555-HOME</a>
@@ -125,66 +60,62 @@
     </header>
 
     <main>
-        <section class="contact-hero">
-            <div class="section-inner">
-                <h1 class="section-title" style="color: white;">Get In Touch</h1>
-                <p style="color: rgba(255,255,255,0.9); max-width: 700px; margin: 0 auto;">Have questions? We're here to help you navigate your home sale with ease and transparency.</p>
+        <section class="section calc-section" style="margin-top: 2rem;">
+            <div class="section-inner calc-inner">
+                <div class="calc-copy">
+                    <p class="badge-pill badge-accent">Equity Audit</p>
+                    <h2>The Listing Tax.</h2>
+                    <p>Traditional agents focus on sales price. We focus on the amount you actually deposit by highlighting every fee that leaves your pocket.</p>
+                    <div class="calc-metrics">
+                        <div class="metric">
+                            <span>Agent Commissions (6%)</span>
+                            <strong id="commission">-$21,000</strong>
+                        </div>
+                        <div class="metric">
+                            <span>Closing Costs (2.5%)</span>
+                            <strong id="closing">-$8,750</strong>
+                        </div>
+                        <div class="metric">
+                            <span>Holding & Wait Costs</span>
+                            <strong id="holding">-$11,200</strong>
+                        </div>
+                    </div>
+                </div>
+                <div class="calc-panel">
+                    <div class="calc-slider">
+                        <label class="sr-only" for="value-slider">Property value</label>
+                        <input id="value-slider" type="range" min="120000" max="900000" step="5000" value="350000">
+                        <div class="slider-value">
+                            <span>Property value</span>
+                            <strong id="value-display">$350,000</strong>
+                        </div>
+                    </div>
+                    <div class="listing-net-card">
+                        <p>Listing net check (estimated)</p>
+                        <strong id="net-display">$309,050</strong>
+                        <p class="listing-note">We measure the cash you keep after every hidden tag.</p>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <div class="contact-grid">
-            <div class="contact-info">
-                <h2>Contact Information</h2>
-                <p>Reach out to us through any of these channels. Our team is available 24/7 to assist you.</p>
-                
-                <div class="contact-method" style="margin-top: 3rem;">
-                    <div class="contact-icon">📞</div>
-                    <div class="contact-text">
-                        <h3>Phone</h3>
-                        <p><a href="tel:8005554663" style="color: inherit; font-weight: 700;">(800) 555-HOME</a></p>
-                        <p>Available 24/7 for immediate assistance.</p>
-                    </div>
+        <section class="section contact-section">
+            <div class="section-inner contact-inner">
+                <div class="contact-copy">
+                    <p class="section-title">Ready to keep more of your equity?</p>
+                    <p class="section-lead">Get a no-obligation cash offer and see how much you could save by selling to us.</p>
+                    <ul>
+                        <li>📍 Serving Phoenix & nationwide referrals</li>
+                        <li>🕔 Available evenings, weekends, and holidays</li>
+                        <li>📱 Text updates and concierge support</li>
+                    </ul>
+                    <button class="btn-primary open-offer" type="button">Get my offer</button>
                 </div>
-
-                <div class="contact-method">
-                    <div class="contact-icon">📧</div>
-                    <div class="contact-text">
-                        <h3>Email</h3>
-                        <p><a href="mailto:info@thehomebuyerteam.com" style="color: inherit; font-weight: 700;">info@thehomebuyerteam.com</a></p>
-                        <p>We typically respond within 1 business hour.</p>
-                    </div>
-                </div>
-
-                <div class="contact-method">
-                    <div class="contact-icon">📍</div>
-                    <div class="contact-text">
-                        <h3>Headquarters</h3>
-                        <p>500 Main Street</p>
-                        <p>Phoenix, AZ 85001</p>
-                    </div>
-                </div>
+                <figure class="contact-visual">
+                    <img src="Images/Home-Buyer-Freedom-Cut.gif" alt="Team closing a deal">
+                </figure>
             </div>
-
-            <div class="contact-form-container">
-                <h3>Send us a message</h3>
-                <form id="contact-page-form" class="strategy-report-form">
-                    <div class="form-row">
-                        <input type="text" name="name" placeholder="Your Name" required>
-                    </div>
-                    <div class="form-row">
-                        <input type="email" name="email" placeholder="Email Address" required>
-                    </div>
-                    <div class="form-row">
-                        <input type="tel" name="phone" placeholder="Phone Number" required>
-                    </div>
-                    <div class="form-row">
-                        <textarea name="message" placeholder="How can we help you?" style="min-height: 120px; padding: 1rem; border-radius: 0.9rem; border: 2px solid #cbd5e0; font-family: inherit;" required></textarea>
-                    </div>
-                    <button type="submit" class="btn-primary" style="width: 100%; margin-top: 1rem;">Send Message</button>
-                </form>
-            </div>
-        </div>
-
+        </section>
     </main>
 
     <footer class="footer">
@@ -273,12 +204,5 @@
     </div>
 
     <script src="scripts.js"></script>
-    <script>
-        document.getElementById('contact-page-form')?.addEventListener('submit', (e) => {
-            e.preventDefault();
-            alert('Thank you for your message! A specialist will contact you shortly.');
-            e.target.reset();
-        });
-    </script>
 </body>
 </html>

@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 300" fill="none">
+  <defs>
+    <linearGradient id="skin" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#F5DEB3"/>
+      <stop offset="100%" style="stop-color:#E8C9A0"/>
+    </linearGradient>
+    <linearGradient id="blazer" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0b3d73"/>
+      <stop offset="100%" style="stop-color:#06214f"/>
+    </linearGradient>
+    <linearGradient id="tablet" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f7c948"/>
+      <stop offset="100%" style="stop-color:#e5b83d"/>
+    </linearGradient>
+  </defs>
+  <!-- Body / Blazer -->
+  <path d="M55 135 L145 135 L148 275 L52 275 Z" fill="url(#blazer)"/>
+  <!-- Shirt front -->
+  <path d="M92 135 L108 135 L108 200 L92 200 Z" fill="white" opacity="0.9"/>
+  <!-- Head -->
+  <ellipse cx="100" cy="95" rx="40" ry="45" fill="url(#skin)"/>
+  <!-- Hair -->
+  <path d="M60 55 Q65 95 62 130 L138 130 Q135 95 140 55 Q118 35 100 32 Q82 35 60 55" fill="#2C1810"/>
+  <!-- Eyes -->
+  <ellipse cx="85" cy="92" rx="3" ry="4" fill="#2C1810"/>
+  <ellipse cx="115" cy="92" rx="3" ry="4" fill="#2C1810"/>
+  <!-- Smile -->
+  <path d="M88 108 Q100 118 112 108" stroke="#8B4513" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <!-- Tablet with data -->
+  <rect x="72" y="165" width="56" height="75" rx="6" fill="url(#tablet)"/>
+  <rect x="78" y="172" width="44" height="48" rx="4" fill="white"/>
+  <line x1="82" y1="182" x2="118" y2="182" stroke="#0b3d73" stroke-width="0.8"/>
+  <line x1="82" y1="190" x2="112" y2="190" stroke="#0b3d73" stroke-width="0.8"/>
+  <line x1="82" y1="198" x2="105" y2="198" stroke="#0b3d73" stroke-width="0.8"/>
+  <line x1="82" y1="206" x2="110" y2="206" stroke="#0b3d73" stroke-width="0.8"/>
+  <!-- Arms -->
+  <path d="M55 135 L50 155 L68 168 L72 163" fill="url(#skin)"/>
+  <path d="M145 135 L150 155 L132 168 L128 163" fill="url(#skin)"/>
+  <!-- Thumbs up -->
+  <path d="M128 163 L136 155 L140 165 L137 172 L128 170 Z" fill="url(#skin)"/>
+</svg>

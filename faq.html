@@ -8,7 +8,7 @@
     <link rel="icon" type="image/png" href="Images/The-home-buyer-team-favicon.png">
     <style>
         .faq-hero {
-            background: linear-gradient(135deg, #06214f, #0f2c6b);
+            background: linear-gradient(135deg, #1a4a6e, #2563a8);
             padding: 8rem 1.5rem 4rem;
             color: white;
             text-align: center;
@@ -26,7 +26,7 @@
             margin-bottom: 1rem;
             box-shadow: 0 10px 30px rgba(0,0,0,0.05);
             overflow: hidden;
-            border: 1px solid rgba(11, 61, 115, 0.05);
+            border: 1px solid rgba(30, 90, 138, 0.06);
         }
         .faq-question {
             padding: 1.5rem 2rem;
@@ -51,7 +51,7 @@
             max-height: 0;
             overflow: hidden;
             transition: all 0.3s ease-out;
-            color: rgba(11, 61, 115, 0.85);
+            color: rgba(30, 90, 138, 0.85);
             line-height: 1.7;
         }
         .faq-item.active .faq-answer {
@@ -73,6 +73,43 @@
             border-radius: 2rem;
             margin-top: 2rem;
         }
+        .faq-resources-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.25rem;
+            margin: 0 auto;
+        }
+        .faq-resource-link {
+            flex: 0 0 calc(33.333% - 1rem);
+            min-width: 220px;
+            max-width: 320px;
+            text-align: center;
+            padding: 1.5rem 1rem;
+            background: var(--surface);
+            border-radius: 1rem;
+            border: 1px solid rgba(30, 90, 138, 0.08);
+            box-shadow: 0 2px 12px rgba(30, 90, 138, 0.06);
+            transition: transform 0.2s, box-shadow 0.2s;
+            text-decoration: none;
+            display: block;
+        }
+        .faq-resource-link:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(30, 90, 138, 0.1);
+        }
+        .faq-resource-link h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--blue);
+            margin: 0 0 0.5rem;
+        }
+        .faq-resource-link p {
+            font-size: 0.9rem;
+            color: rgba(30, 90, 138, 0.85);
+            margin: 0;
+            line-height: 1.4;
+        }
     </style>
 </head>
 <body>
@@ -90,17 +127,21 @@
                 <a class="nav-link-desktop" href="about.html">About</a>
                 <a class="nav-link-desktop" href="faq.html">FAQ</a>
                 <a class="nav-link-desktop" href="contact.html">Contact</a>
+                <div class="nav-desktop-item">
+                    <button class="nav-link-desktop nav-dropdown-trigger" type="button" aria-expanded="false" aria-haspopup="true">Resources ▾</button>
+                    <div class="nav-desktop-dropdown">
+                        <a class="nav-desktop-dropdown-link" href="equity-audit.html">Equity Audit</a>
+                        <a class="nav-desktop-dropdown-link" href="foreclosure.html">Foreclosure</a>
+                        <a class="nav-desktop-dropdown-link" href="probate.html">Probate</a>
+                        <a class="nav-desktop-dropdown-link" href="divorce.html">Divorce</a>
+                        <a class="nav-desktop-dropdown-link" href="landlord.html">Landlord</a>
+                    </div>
+                </div>
             </div>
             <form class="nav-address-form" id="nav-address-form">
                 <input type="text" placeholder="Enter street address" required id="nav-address-input">
                 <button type="submit" class="btn-nav-submit">Get Offer</button>
             </form>
-
-            <div class="nav-right-actions">
-                <button class="nav-toggle" aria-expanded="false" aria-controls="primary-links" aria-label="Toggle navigation">
-                    <span class="hamburger"></span>
-                </button>
-            </div>
 
             <div class="nav-links" id="primary-links">
                 <button class="nav-close" id="close-nav" aria-label="Close menu">&times;</button>
@@ -111,6 +152,7 @@
                 <div class="nav-item">
                     <button class="nav-link dropdown-toggle" aria-expanded="false">Resources</button>
                     <div class="dropdown-menu">
+                        <a class="dropdown-link" href="equity-audit.html">Equity Audit</a>
                         <a class="dropdown-link" href="foreclosure.html">Foreclosure</a>
                         <a class="dropdown-link" href="probate.html">Probate</a>
                         <a class="dropdown-link" href="divorce.html">Divorce</a>
@@ -184,15 +226,88 @@
                     <p>We can often close in as little as 7 to 14 days, depending on the title work. However, we work on your timeline—if you need more time to move or settle affairs, we can schedule the closing for a later date that works for you.</p>
                 </div>
             </div>
+
+            <div class="faq-item">
+                <button class="faq-question">Do you buy houses in any condition?</button>
+                <div class="faq-answer">
+                    <p>Yes. We buy homes in any condition—whether they need minor repairs, major renovations, or are in foreclosure. No need to fix anything before selling. We handle all repairs and updates after closing.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">What areas do you serve?</button>
+                <div class="faq-answer">
+                    <p>We primarily serve the Phoenix metro area and Arizona. We also work with homeowners nationwide through our referral network. Enter your address above to see if we can help with your property.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">Do you buy houses with liens or back taxes?</button>
+                <div class="faq-answer">
+                    <p>In many cases, yes. We work with title companies to resolve liens, back taxes, and other encumbrances at closing. The payoff amounts are typically deducted from the sale proceeds. Share your situation with us and we'll let you know if we can help.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">Can I sell if I'm behind on mortgage payments?</button>
+                <div class="faq-answer">
+                    <p>Yes. We regularly help homeowners who are behind on payments or facing foreclosure. We can work with your lender and structure the sale so the mortgage is paid off at closing. The sooner you reach out, the more options we can explore together.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">What if I have tenants in the property?</button>
+                <div class="faq-answer">
+                    <p>We buy tenant-occupied properties. We handle the tenant transition and any necessary notices. You can sell without the hassle of evictions or waiting for leases to end. See our <a href="landlord.html">Landlord</a> resource page for more details.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">How is this different from selling with a real estate agent?</button>
+                <div class="faq-answer">
+                    <p>With us, there are no agent commissions (typically 5–6% of the sale price), no listing fees, no staging or repairs, and no waiting for buyer financing. You get a firm cash offer, close on your timeline, and walk away with certainty. Ideal when you need speed, simplicity, or have a property that's hard to sell traditionally.</p>
+                </div>
+            </div>
         </div>
+
+        <section class="section" style="padding-top: 0;">
+            <div class="section-inner">
+                <h2 class="section-title" style="text-align: center; margin-bottom: 1rem;">Explore by Situation</h2>
+                <p class="section-lead" style="text-align: center; max-width: 600px; margin: 0 auto 2rem;">Learn more about how we help in specific circumstances.</p>
+                <div class="faq-resources-grid">
+                    <a href="foreclosure.html" class="faq-resource-link">
+                        <h3>Foreclosure</h3>
+                        <p>Selling to avoid foreclosure or after a notice.</p>
+                    </a>
+                    <a href="probate.html" class="faq-resource-link">
+                        <h3>Probate</h3>
+                        <p>Inherited property? Sell without probate headaches.</p>
+                    </a>
+                    <a href="divorce.html" class="faq-resource-link">
+                        <h3>Divorce</h3>
+                        <p>Split assets quickly with a fair cash sale.</p>
+                    </a>
+                    <a href="landlord.html" class="faq-resource-link">
+                        <h3>Landlord</h3>
+                        <p>Tired of tenants? Exit the rental business cleanly.</p>
+                    </a>
+                    <a href="equity-audit.html" class="faq-resource-link">
+                        <h3>Equity Audit</h3>
+                        <p>See how much your home could be worth.</p>
+                    </a>
+                </div>
+            </div>
+        </section>
 
         <section class="faq-cta">
             <div class="section-inner">
                 <h2>Still have questions?</h2>
                 <p>Our team is here to help you navigate your unique situation.</p>
                 <div class="hero-actions" style="justify-content: center; margin-top: 2rem;">
-                    <button class="btn-primary open-offer" type="button">Request a cash offer</button>
-                    <div class="hero-phone" style="background: rgba(11, 61, 115, 0.1); color: var(--blue);">📞 (800) 555-HOME</div>
+                    <form class="nav-address-form hero-address-form" id="hero-address-form">
+                        <input type="text" placeholder="Enter street address" required id="hero-address-input">
+                        <button type="submit" class="btn-nav-submit">Get Offer</button>
+                    </form>
                 </div>
             </div>
         </section>

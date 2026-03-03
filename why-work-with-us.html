@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why Work With Us | The Home Buyer Team</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="Images/The-home-buyer-team-favicon.png">
+    <style>
+        .why-page-hero {
+            background: linear-gradient(135deg, #1a4a6e, #2563a8 60%, #1e5a8a);
+            padding: 6rem 1.5rem 5rem;
+            color: white;
+            text-align: center;
+        }
+        .why-page-hero h1 {
+            font-size: clamp(2.25rem, 4vw, 3.25rem);
+            font-weight: 800;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+        .why-page-hero p {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            line-height: 1.6;
+        }
+        .why-page-situations {
+            padding: 5rem 1.5rem;
+        }
+        .why-page-situations h2 {
+            font-size: clamp(1.75rem, 2.5vw, 2.25rem);
+            font-weight: 800;
+            color: var(--blue);
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+        .why-page-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .why-page-item {
+            text-align: center;
+            padding: 2rem 1.5rem;
+            background: var(--surface);
+            border-radius: 1rem;
+            border: 1px solid rgba(11, 61, 115, 0.08);
+            box-shadow: 0 2px 12px rgba(11, 61, 115, 0.06);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .why-page-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(11, 61, 115, 0.1);
+        }
+        .why-page-item .icon-wrap {
+            width: 56px;
+            height: 56px;
+            margin: 0 auto 1.25rem;
+            color: var(--blue);
+        }
+        .why-page-item .icon-wrap svg {
+            width: 100%;
+            height: 100%;
+        }
+        .why-page-item h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--blue);
+            margin-bottom: 0.5rem;
+        }
+        .why-page-item p {
+            font-size: 0.95rem;
+            color: rgba(11, 61, 115, 0.85);
+            margin: 0;
+            line-height: 1.5;
+        }
+        @media (max-width: 768px) {
+            .why-page-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.5rem;
+            }
+        }
+        @media (max-width: 500px) {
+            .why-page-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        .strategy-form-section {
+            padding: 5rem 1.5rem;
+            background: var(--off-white);
+        }
+        .strategy-form-inner {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .strategy-form-section h2 {
+            font-size: clamp(1.75rem, 2.5vw, 2.25rem);
+            font-weight: 800;
+            color: var(--blue);
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        .strategy-form-section .form-lead {
+            text-align: center;
+            color: rgba(11, 61, 115, 0.85);
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+        .situation-form-wrap {
+            background: #fff;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            border: 1px solid rgba(11, 61, 115, 0.1);
+            box-shadow: 0 2px 12px rgba(11, 61, 115, 0.06);
+            margin-bottom: 1.5rem;
+        }
+        .situation-form-wrap textarea {
+            width: 100%;
+            min-height: 120px;
+            border: 1px solid rgba(11, 61, 115, 0.2);
+            border-radius: 0.75rem;
+            padding: 1rem 1.25rem;
+            font-family: inherit;
+            font-size: 1rem;
+            color: var(--blue);
+            resize: vertical;
+            transition: border-color 0.2s;
+        }
+        .situation-form-wrap textarea::placeholder {
+            color: #94a3b8;
+        }
+        .situation-form-wrap textarea:focus {
+            outline: none;
+            border-color: var(--blue);
+            box-shadow: 0 0 0 3px rgba(11, 61, 115, 0.1);
+        }
+        .strategy-form-section .btn-strategy {
+            width: 100%;
+            padding: 1rem 2rem;
+            font-size: 1.05rem;
+        }
+        .strategy-benefits {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(11, 61, 115, 0.1);
+        }
+        .strategy-benefits p {
+            font-size: 0.95rem;
+            color: rgba(11, 61, 115, 0.8);
+            margin-bottom: 1rem;
+        }
+        .strategy-benefits ul {
+            margin: 0;
+            padding-left: 1.25rem;
+            color: rgba(11, 61, 115, 0.85);
+            line-height: 1.8;
+        }
+    </style>
+</head>
+<body data-page="why-us">
+    <div class="top-bar">
+        <span>Need help? Call us 24/7:</span>
+        <a href="tel:8005554663">📞 (800) 555-HOME</a>
+    </div>
+    <header class="page-header">
+        <nav class="primary-nav" aria-label="Primary">
+            <a class="brand" href="index.html" aria-label="Home">
+                <img src="Images/The-home-buyer-team-logo.png" alt="The Home Buyer Team logo" class="brand-logo">
+            </a>
+            <div class="nav-desktop-links">
+                <a class="nav-link-desktop" href="index.html">Home</a>
+                <a class="nav-link-desktop" href="about.html">About</a>
+                <a class="nav-link-desktop" href="faq.html">FAQ</a>
+                <a class="nav-link-desktop" href="contact.html">Contact</a>
+                <div class="nav-desktop-item">
+                    <button class="nav-link-desktop nav-dropdown-trigger" type="button" aria-expanded="false" aria-haspopup="true">Resources ▾</button>
+                    <div class="nav-desktop-dropdown">
+                        <a class="nav-desktop-dropdown-link" href="equity-audit.html">Equity Audit</a>
+                        <a class="nav-desktop-dropdown-link" href="foreclosure.html">Foreclosure</a>
+                        <a class="nav-desktop-dropdown-link" href="probate.html">Probate</a>
+                        <a class="nav-desktop-dropdown-link" href="divorce.html">Divorce</a>
+                        <a class="nav-desktop-dropdown-link" href="landlord.html">Landlord</a>
+                    </div>
+                </div>
+            </div>
+            <form class="nav-address-form" id="nav-address-form">
+                <input type="text" placeholder="Enter street address" required id="nav-address-input">
+                <button type="submit" class="btn-nav-submit">Get Offer</button>
+            </form>
+
+            <div class="nav-links" id="primary-links">
+                <button class="nav-close" id="close-nav" aria-label="Close menu">&times;</button>
+                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link" href="about.html">About Us</a>
+                <a class="nav-link" href="faq.html">FAQ</a>
+                <a class="nav-link" href="contact.html">Contact Us</a>
+                <div class="nav-item">
+                    <button class="nav-link dropdown-toggle" aria-expanded="false">Resources</button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-link" href="equity-audit.html">Equity Audit</a>
+                        <a class="dropdown-link" href="foreclosure.html">Foreclosure</a>
+                        <a class="dropdown-link" href="probate.html">Probate</a>
+                        <a class="dropdown-link" href="divorce.html">Divorce</a>
+                        <a class="dropdown-link" href="landlord.html">Landlord</a>
+                    </div>
+                </div>
+                <button class="btn-primary open-offer" type="button" style="margin-top: 2rem; width: 100%;">Get Cash Offer Now</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="why-page-hero" aria-labelledby="why-hero-heading">
+            <h1 id="why-hero-heading">Why Work With The Home Buyer Team</h1>
+            <p>We help homeowners navigate difficult situations with clarity, speed, and fair solutions.</p>
+            <button type="button" class="btn-primary open-offer">Get Your Cash Offer</button>
+        </section>
+
+        <section class="why-page-situations" aria-labelledby="situations-heading">
+            <h2 id="situations-heading">Types of Situations We Help With</h2>
+            <div class="why-page-grid">
+                <article class="why-page-item">
+                    <div class="icon-wrap" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M8 36V20l16-12 16 12v16"/>
+                            <path d="M20 36V24h8v12"/>
+                            <path d="M12 20l12-9 12 9"/>
+                            <path d="M18 28h12v8H18z"/>
+                        </svg>
+                    </div>
+                    <h3>Expensive Repairs</h3>
+                    <p>Roof, foundation, or major fixes? Skip the hassle and sell as-is.</p>
+                </article>
+                <article class="why-page-item">
+                    <div class="icon-wrap" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M8 16h32v24H8z"/>
+                            <path d="M16 16V12a4 4 0 0 1 8 0v4"/>
+                            <path d="M12 28h24"/>
+                            <path d="M20 32h8"/>
+                        </svg>
+                    </div>
+                    <h3>Relocating</h3>
+                    <p>Moving for work or family? Sell on your timeline, not the market's.</p>
+                </article>
+                <article class="why-page-item">
+                    <div class="icon-wrap" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M8 14h32v20H8z"/>
+                            <path d="M16 14V10a4 4 0 0 1 8 0v4"/>
+                            <path d="M20 24h8"/>
+                            <path d="M22 18v12"/>
+                        </svg>
+                    </div>
+                    <h3>Financial Issues</h3>
+                    <p>Need liquidity fast? We close quickly and pay fair cash.</p>
+                </article>
+                <article class="why-page-item">
+                    <div class="icon-wrap" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14 20h20v20H14z"/>
+                            <path d="M20 20V14a4 4 0 0 1 8 0v6"/>
+                            <path d="M18 28h12"/>
+                            <path d="M18 32h8"/>
+                        </svg>
+                    </div>
+                    <h3>Problematic Rental</h3>
+                    <p>Tired of tenants and maintenance? Exit the landlord life cleanly.</p>
+                </article>
+                <article class="why-page-item">
+                    <div class="icon-wrap" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 36V24l12-12 12 12v12"/>
+                            <path d="M20 36V28h8v8"/>
+                            <path d="M24 24l-8 8h16l-8-8z"/>
+                        </svg>
+                    </div>
+                    <h3>Downsizing</h3>
+                    <p>Ready for a smaller space? We make the transition smooth and simple.</p>
+                </article>
+                <article class="why-page-item">
+                    <div class="icon-wrap" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M24 8v12l-8 8h16l-8-8V8z"/>
+                            <path d="M12 36h24"/>
+                            <path d="M20 32h8"/>
+                        </svg>
+                    </div>
+                    <h3>Inheriting a House</h3>
+                    <p>Inherited property? Avoid probate headaches and sell with ease.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="strategy-form-section" aria-labelledby="strategy-form-heading">
+            <div class="strategy-form-inner">
+                <h2 id="strategy-form-heading">Describe Your Situation. Get a Smart Next Step.</h2>
+                <p class="form-lead">Tell us briefly what you're facing. Our AI analyzes your scenario and delivers personalized guidance.</p>
+                <div class="situation-form-wrap">
+                    <textarea id="why-page-strategy-input" data-strategy-input placeholder="Example: I inherited a property in Phoenix that needs a new roof. I live out of state and need to sell quickly..." aria-label="Describe your situation" name="situation"></textarea>
+                </div>
+                <button type="button" class="btn-primary btn-strategy" id="open-strategy-modal">Get My Recommended Strategy</button>
+                <div class="strategy-benefits">
+                    <p>You'll receive guidance on:</p>
+                    <ul>
+                        <li>Best next steps for your situation</li>
+                        <li>Whether to sell as-is or invest in repairs</li>
+                        <li>How to evaluate investor offers</li>
+                        <li>How to choose the right buyer</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section contact-section">
+            <div class="section-inner contact-inner">
+                <div class="contact-copy">
+                    <p class="section-title">Ready when you are</p>
+                    <p class="section-lead">Get a no-obligation cash offer today and see how easy selling your house can be.</p>
+                    <ul>
+                        <li>📍 Serving Phoenix & nationwide referrals</li>
+                        <li>🕔 Available evenings, weekends, and holidays</li>
+                        <li>📱 Text updates and concierge support</li>
+                    </ul>
+                    <button class="btn-primary open-offer" type="button">Get my offer</button>
+                </div>
+                <figure class="contact-visual">
+                    <img src="Images/Home-Buyer-Freedom-Cut.gif" alt="Team closing a deal">
+                </figure>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <img src="Images/The-home-buyer-team-logo.png" alt="Logo" style="height: 50px;">
+            <p>Licensed acquisition specialists providing immediate liquidity for residential property assets.</p>
+            <small>© 2026 The Home Buyer Team. All rights reserved.</small>
+        </div>
+    </footer>
+
+    <div class="modal-overlay" id="offer-modal">
+        <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+            <button class="modal-close" id="close-offer-modal" aria-label="Close form">&times;</button>
+            <h2 id="modal-title">Request an offer</h2>
+            <p>Complete the four-step form and we will call you with a firm cash offer.</p>
+            <div class="progress-bar">
+                <div class="progress-step active" data-index="0"><span>1</span><div>Get started</div></div>
+                <div class="progress-step" data-index="1"><span>2</span><div>Your situation</div></div>
+                <div class="progress-step" data-index="2"><span>3</span><div>Your home</div></div>
+                <div class="progress-step" data-index="3"><span>4</span><div>About you</div></div>
+            </div>
+            <form id="offer-form">
+                <div class="offer-step active" data-step="0">
+                    <div class="form-row">
+                        <input id="offer-address" name="address" type="text" placeholder="Enter your address" required>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn-ghost" data-prev disabled>Back</button>
+                        <button type="button" class="btn-primary" data-next>Next Step</button>
+                    </div>
+                </div>
+                <div class="offer-step" data-step="1">
+                    <div class="form-row">
+                        <select name="reason" required>
+                            <option value="">Reason for wanting to sell?</option>
+                            <option>Financial Hardship</option>
+                            <option>Inherited</option>
+                            <option>Relocating</option>
+                            <option>Downsizing</option>
+                            <option>Divorce</option>
+                            <option>Repairs/Damage</option>
+                            <option>Tired Landlord</option>
+                            <option>Just curious on value</option>
+                        </select>
+                    </div>
+                    <div class="form-row">
+                        <select name="timeline" required>
+                            <option value="">How soon would you like to sell?</option>
+                            <option>ASAP</option>
+                            <option>Within 3 Months</option>
+                            <option>Within 6 Months</option>
+                            <option>I'm in no rush</option>
+                        </select>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn-ghost" data-prev>Back</button>
+                        <button type="button" class="btn-primary" data-next>Next Step</button>
+                    </div>
+                </div>
+                <div class="offer-step" data-step="2">
+                    <div class="form-row">
+                        <textarea name="details" placeholder="Describe repairs, tenants, or liens" required></textarea>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn-ghost" data-prev>Back</button>
+                        <button type="button" class="btn-primary" data-next>Next Step</button>
+                    </div>
+                </div>
+                <div class="offer-step" data-step="3">
+                    <div class="form-row">
+                        <input name="full-name" type="text" placeholder="Name" required>
+                    </div>
+                    <div class="form-row">
+                        <input name="email" type="email" placeholder="Email" required>
+                    </div>
+                    <div class="form-row">
+                        <input name="phone" type="tel" placeholder="Phone" required>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn-ghost" data-prev>Back</button>
+                        <button type="submit" class="btn-primary">Get my offer</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="strategy-modal">
+        <div class="modal-content strategy-modal-content" role="dialog" aria-modal="true" aria-labelledby="strategy-modal-title">
+            <div class="strategy-modal-header">
+                <h2 id="strategy-modal-title">AI Intelligence Report</h2>
+                <button class="modal-close-styled" id="close-strategy-modal" aria-label="Close">&times;</button>
+            </div>
+            <div class="strategy-modal-body">
+                <div class="strategy-generator" data-strategy-generator data-generator-id="general">
+                    <div class="strategy-summary" data-report-summary>
+                        <div class="strategy-report-text" data-report-text></div>
+                    </div>
+                    <div class="strategy-lead-form-wrapper">
+                        <p class="form-instruction">Enter your details to download the full detailed strategy PDF</p>
+                        <form class="strategy-report-form" data-report-form novalidate>
+                            <div class="form-row">
+                                <input name="full-name" type="text" placeholder="Full Name" required>
+                            </div>
+                            <div class="form-row">
+                                <input name="email" type="email" placeholder="Email Address" required>
+                            </div>
+                            <div class="form-row">
+                                <input name="phone" type="tel" placeholder="Phone Number" required>
+                            </div>
+                            <button class="btn-primary strategy-report-submit" type="submit" disabled>Download Detailed Strategy PDF</button>
+                        </form>
+                        <p class="strategy-report-status" aria-live="polite" data-report-status></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

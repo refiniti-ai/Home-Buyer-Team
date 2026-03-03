@@ -56,17 +56,21 @@
                 <a class="nav-link-desktop" href="about.html">About</a>
                 <a class="nav-link-desktop" href="faq.html">FAQ</a>
                 <a class="nav-link-desktop" href="contact.html">Contact</a>
+                <div class="nav-desktop-item">
+                    <button class="nav-link-desktop nav-dropdown-trigger" type="button" aria-expanded="false" aria-haspopup="true">Resources ▾</button>
+                    <div class="nav-desktop-dropdown">
+                        <a class="nav-desktop-dropdown-link" href="equity-audit.html">Equity Audit</a>
+                        <a class="nav-desktop-dropdown-link" href="foreclosure.html">Foreclosure</a>
+                        <a class="nav-desktop-dropdown-link" href="probate.html">Probate</a>
+                        <a class="nav-desktop-dropdown-link" href="divorce.html">Divorce</a>
+                        <a class="nav-desktop-dropdown-link" href="landlord.html">Landlord</a>
+                    </div>
+                </div>
             </div>
             <form class="nav-address-form" id="nav-address-form">
                 <input type="text" placeholder="Enter street address" required id="nav-address-input">
                 <button type="submit" class="btn-nav-submit">Get Offer</button>
             </form>
-
-            <div class="nav-right-actions">
-                <button class="nav-toggle" aria-expanded="false" aria-controls="primary-links" aria-label="Toggle navigation">
-                    <span class="hamburger"></span>
-                </button>
-            </div>
 
             <div class="nav-links" id="primary-links">
                 <button class="nav-close" id="close-nav" aria-label="Close menu">&times;</button>
@@ -77,6 +81,7 @@
                 <div class="nav-item">
                     <button class="nav-link dropdown-toggle" aria-expanded="false">Resources</button>
                     <div class="dropdown-menu">
+                        <a class="dropdown-link" href="equity-audit.html">Equity Audit</a>
                         <a class="dropdown-link" href="foreclosure.html">Foreclosure</a>
                         <a class="dropdown-link" href="probate.html">Probate</a>
                         <a class="dropdown-link" href="divorce.html">Divorce</a>
@@ -96,12 +101,11 @@
                     <h1 id="hero-heading">Need cash quickly? We buy your house as-is and close when you're ready.</h1>
                     <p>Skip commissions, repairs, and long showings. The Home Buyer Team delivers firm, transparent cash offers for homes in any condition.</p>
                     <div class="hero-actions">
-                        <button class="btn-primary open-offer" type="button">Request a cash offer</button>
-                        <div class="hero-phone" aria-label="Call us">📞 (800) 555-HOME</div>
+                        <form class="nav-address-form hero-address-form" id="hero-address-form">
+                            <input type="text" placeholder="Enter street address" required id="hero-address-input">
+                            <button type="submit" class="btn-nav-submit">Get Offer</button>
+                        </form>
                     </div>
-                </div>
-                <div class="hero-visual" aria-hidden="true">
-                    <img src="Images/slick-home-buyer-01.png" alt="Animated cash expert delivering funds">
                 </div>
             </div>
         </section>
@@ -121,29 +125,67 @@
             </div>
         </section>
 
+        <section class="section how-it-works" aria-labelledby="how-it-works-heading">
+            <div class="section-inner">
+                <p class="how-it-works-subtitle">The Process</p>
+                <h2 id="how-it-works-heading" class="how-it-works-title">How It Works</h2>
+                <div class="how-it-works-grid">
+                    <article class="how-it-works-step">
+                        <div class="how-it-works-icon" aria-hidden="true">
+                            <img src="Images/submit your info.webp" alt="">
+                        </div>
+                        <h3>Submit Your Info</h3>
+                        <p>Share your address and property details in minutes.</p>
+                    </article>
+                    <article class="how-it-works-step">
+                        <div class="how-it-works-icon" aria-hidden="true">
+                            <img src="Images/get your info.webp" alt="">
+                        </div>
+                        <h3>Get Your Offer</h3>
+                        <p>A fair, no-obligation cash offer tailored to your situation.</p>
+                    </article>
+                    <article class="how-it-works-step">
+                        <div class="how-it-works-icon" aria-hidden="true">
+                            <img src="Images/close when ready.webp" alt="">
+                        </div>
+                        <h3>Close When Ready</h3>
+                        <p>We handle everything from start to finish.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
         <section class="section">
             <div class="section-inner">
                 <p class="section-title">Streamlined process for stressed homeowners</p>
                 <p class="section-lead">Our four-step system stops the overwhelm and delivers the cash you need.</p>
                 <div class="process-grid">
                     <article class="process-card">
-                        <img src="Images/Icon-For-Sale-For-Rent-01.png" alt="">
-                        <h3>1. Get started</h3>
+                        <div class="process-card-header">
+                            <img src="Images/Icon-For-Sale-For-Rent-01.png" alt="">
+                            <h3>Get started</h3>
+                        </div>
                         <p>Share your address and situation. We analyze it instantly, no agent required.</p>
                     </article>
                     <article class="process-card">
-                        <img src="Images/girl-home-cash-01.png" alt="">
-                        <h3>2. Your situation</h3>
+                        <div class="process-card-header">
+                            <img src="Images/girl-home-cash-01.png" alt="">
+                            <h3>Your situation</h3>
+                        </div>
                         <p>Select why you are selling so our team can tailor the payment timeline.</p>
                     </article>
                     <article class="process-card">
-                        <img src="Images/icon-calculator-1.png" alt="">
-                        <h3>3. Your home</h3>
+                        <div class="process-card-header">
+                            <img src="Images/icon-calculator-1.png" alt="">
+                            <h3>Your home</h3>
+                        </div>
                         <p>Tell us about repairs, tenants, or distress. We price the home as-is.</p>
                     </article>
                     <article class="process-card">
-                        <img src="Images/offer-match-01-300x300.png" alt="">
-                        <h3>4. About you</h3>
+                        <div class="process-card-header">
+                            <img src="Images/About you.webp" alt="">
+                            <h3>About you</h3>
+                        </div>
                         <p>Share basic contact info and we send a firm cash offer on your timeline.</p>
                     </article>
                 </div>
@@ -163,13 +205,129 @@
                     </div>
                     <div class="strategy-highlight" aria-hidden="true">
                         <div class="strategy-badge-wrapper">
-                            <span class="strategy-badge">Tactical Intelligence</span>
+                            <span class="strategy-badge">Fast-Facts Freddy</span>
                         </div>
-                        <p class="strategy-powered">Powered by PropertyAI™</p>
-                        <div class="strategy-visual">
-                            <img src="Images/Home-Buyer-Roof-Lift.gif" alt="Team collaborating on a strategy">
+                        <div class="strategy-visual strategy-freddy">
+                            <img src="Images/slick-home-buyer-01.png" alt="Fast-Facts Freddy — your friendly neighborhood data expert">
                         </div>
-                        <p class="strategy-note">Our tactics combine local data, lien analysis, and rehab budgets so you keep the equity you deserve.</p>
+                        <div class="strategy-dialogue">
+                            <p class="strategy-note">"I've got the data on your neighborhood and the cash in our vault. Give me 60 seconds and I'll give you the facts."</p>
+                            <span class="strategy-dialogue-attribution">— Freddy</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section why-work-with-us" aria-labelledby="why-work-with-us-heading">
+            <div class="section-inner">
+                <p class="why-work-with-us-subtitle">WE HAVE EXPERIENCE RESOLVING TOUGH SITUATIONS.</p>
+                <h2 id="why-work-with-us-heading" class="why-work-with-us-title">When to work with The Home Buyer Team</h2>
+                <div class="why-work-with-us-grid">
+                    <article class="why-work-with-us-item">
+                        <div class="why-work-with-us-icon" aria-hidden="true">
+                            <img src="Images/expensive repair.webp" alt="">
+                        </div>
+                        <span class="why-work-with-us-label">Expensive Repairs</span>
+                    </article>
+                    <article class="why-work-with-us-item">
+                        <div class="why-work-with-us-icon" aria-hidden="true">
+                            <img src="Images/locating.png.webp" alt="">
+                        </div>
+                        <span class="why-work-with-us-label">Relocating</span>
+                    </article>
+                    <article class="why-work-with-us-item">
+                        <div class="why-work-with-us-icon" aria-hidden="true">
+                            <img src="Images/financial issues.webp" alt="">
+                        </div>
+                        <span class="why-work-with-us-label">Financial Issues</span>
+                    </article>
+                    <article class="why-work-with-us-item">
+                        <div class="why-work-with-us-icon" aria-hidden="true">
+                            <img src="Images/problematic rental.webp" alt="">
+                        </div>
+                        <span class="why-work-with-us-label">Problematic Rental</span>
+                    </article>
+                    <article class="why-work-with-us-item">
+                        <div class="why-work-with-us-icon" aria-hidden="true">
+                            <img src="Images/downsizing.webp" alt="">
+                        </div>
+                        <span class="why-work-with-us-label">Downsizing</span>
+                    </article>
+                    <article class="why-work-with-us-item">
+                        <div class="why-work-with-us-icon" aria-hidden="true">
+                            <img src="Images/Inheriting house.png" alt="">
+                        </div>
+                        <span class="why-work-with-us-label">Inheriting House</span>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section image-carousel-section" aria-labelledby="carousel-heading">
+            <div class="section-inner">
+                <div class="carousel-header">
+                    <div class="carousel-header-text">
+                        <span class="carousel-tag">Gallery</span>
+                        <h2 id="carousel-heading" class="carousel-title">Properties we've transformed</h2>
+                        <p class="carousel-subtitle">See how we turn distressed properties into quality homes across Phoenix and beyond.</p>
+                    </div>
+                    <div class="carousel-nav" aria-label="Carousel navigation">
+                        <button type="button" class="carousel-btn carousel-prev" aria-label="Previous" id="carousel-prev">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+                        </button>
+                        <button type="button" class="carousel-btn carousel-next" aria-label="Next" id="carousel-next">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="carousel-wrapper">
+                    <div class="carousel-track" id="image-carousel-track">
+                        <article class="carousel-card">
+                            <div class="carousel-card-image">
+                                <img src="Images/1.webp" alt="Property transformation 1">
+                            </div>
+                        </article>
+                        <article class="carousel-card">
+                            <div class="carousel-card-image">
+                                <img src="Images/2.webp" alt="Property transformation 2">
+                            </div>
+                        </article>
+                        <article class="carousel-card">
+                            <div class="carousel-card-image">
+                                <img src="Images/3.webp" alt="Property transformation 3">
+                            </div>
+                        </article>
+                        <article class="carousel-card">
+                            <div class="carousel-card-image">
+                                <img src="Images/4.webp" alt="Property transformation 4">
+                            </div>
+                        </article>
+                        <article class="carousel-card">
+                            <div class="carousel-card-image">
+                                <img src="Images/5.webp" alt="Property transformation 5">
+                            </div>
+                        </article>
+                        <article class="carousel-card">
+                            <div class="carousel-card-image">
+                                <img src="Images/6.webp" alt="Property transformation 6">
+                            </div>
+                        </article>
+                        <article class="carousel-card">
+                            <div class="carousel-card-image">
+                                <img src="Images/7.webp" alt="Property transformation 7">
+                            </div>
+                        </article>
+                        <article class="carousel-card">
+                            <div class="carousel-card-image">
+                                <img src="Images/8.webp" alt="Property transformation 8">
+                            </div>
+                        </article>
+                        <article class="carousel-card">
+                            <div class="carousel-card-image">
+                                <img src="Images/9.webp" alt="Property transformation 9">
+                            </div>
+                        </article>
                     </div>
                 </div>
             </div>
@@ -238,61 +396,46 @@
             </div>
         </section>
 
-        <section class="section calc-section">
-            <div class="section-inner calc-inner">
-                <div class="calc-copy">
-                    <p class="badge-pill badge-accent">Equity Audit</p>
-                    <h2>The Listing Tax.</h2>
-                    <p>Traditional agents focus on sales price. We focus on the amount you actually deposit by highlighting every fee that leaves your pocket.</p>
-                    <div class="calc-metrics">
-                        <div class="metric">
-                            <span>Agent Commissions (6%)</span>
-                            <strong id="commission">-$21,000</strong>
-                        </div>
-                        <div class="metric">
-                            <span>Closing Costs (2.5%)</span>
-                            <strong id="closing">-$8,750</strong>
-                        </div>
-                        <div class="metric">
-                            <span>Holding & Wait Costs</span>
-                            <strong id="holding">-$11,200</strong>
-                        </div>
-                    </div>
-                </div>
-                <div class="calc-panel">
-                    <div class="calc-slider">
-                        <label class="sr-only" for="value-slider">Property value</label>
-                        <input id="value-slider" type="range" min="120000" max="900000" step="5000" value="350000">
-                        <div class="slider-value">
-                            <span>Property value</span>
-                            <strong id="value-display">$350,000</strong>
-                        </div>
-                    </div>
-                    <div class="listing-net-card">
-                        <p>Listing net check (estimated)</p>
-                        <strong id="net-display">$309,050</strong>
-                        <p class="listing-note">We measure the cash you keep after every hidden tag.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section testimonials">
+        <section class="section customer-stories" aria-labelledby="customer-stories-heading">
             <div class="section-inner">
-                <p class="section-title">Reputation you can trust</p>
-                <p class="section-lead">Real feedback from homeowners who needed help yesterday.</p>
-                <div class="testimonial-grid">
-                    <article class="testimonial-card">
-                        <p>"The Home Buyer Team closed my inherited home in 5 days and handled the probate paperwork. I finally have funds to move forward."</p>
-                        <cite>— Cynthia, Dallas</cite>
+                <h2 id="customer-stories-heading" class="customer-stories-title">What our clients think of The Home Buyer Team</h2>
+                <p class="customer-stories-subtitle">Some insights from a few actual customers</p>
+                <div class="customer-stories-grid">
+                    <article class="customer-story-card">
+                        <div class="customer-story-avatar" aria-hidden="true">
+                            <span>MS</span>
+                        </div>
+                        <span class="customer-story-quote" aria-hidden="true">"</span>
+                        <p class="customer-story-text">Thank you guys for helping my family out! The process was simple and I can't believe how fast you were able to close. I would definitely recommend The Home Buyer Team to anyone who is looking to sell fast without all the headaches that come with a traditional sale.</p>
+                        <cite class="customer-story-name">Mike S.</cite>
+                        <span class="customer-story-location">Phoenix, AZ</span>
                     </article>
-                    <article class="testimonial-card">
-                        <p>"I was facing foreclosure and every other option failed. They stopped the auction before it hit the courthouse steps."</p>
-                        <cite>— Marcus, Houston</cite>
+                    <article class="customer-story-card">
+                        <div class="customer-story-avatar" aria-hidden="true">
+                            <span>SA</span>
+                        </div>
+                        <span class="customer-story-quote" aria-hidden="true">"</span>
+                        <p class="customer-story-text">I had some complications and didn't want realtors coming through my home. The Home Buyer Team made me a great offer and the process went very smooth! Everyone was very pleasant and helpful. They explained things to me in ways I could understand and made the sale and moving easy.</p>
+                        <cite class="customer-story-name">Samantha A.</cite>
+                        <span class="customer-story-location">Prescott, AZ</span>
                     </article>
-                    <article class="testimonial-card">
-                        <p>"We were divorcing and needed a confidential, neutral buyer. The process was calm, and the cash wired on the same day."</p>
-                        <cite>— Li & Aaron, Austin</cite>
+                    <article class="customer-story-card">
+                        <div class="customer-story-avatar" aria-hidden="true">
+                            <span>TM</span>
+                        </div>
+                        <span class="customer-story-quote" aria-hidden="true">"</span>
+                        <p class="customer-story-text">I needed to sell an inherited home quickly. I contacted the Home Buyers, they got back to me quickly with an offer. I was stunned frankly at what the home was worth. The inspectors came through with masks which I appreciated and the final closing was pretty seamless. Happy overall.</p>
+                        <cite class="customer-story-name">Tyrell M.</cite>
+                        <span class="customer-story-location">Orlando, FL</span>
+                    </article>
+                    <article class="customer-story-card">
+                        <div class="customer-story-avatar" aria-hidden="true">
+                            <span>EH</span>
+                        </div>
+                        <span class="customer-story-quote" aria-hidden="true">"</span>
+                        <p class="customer-story-text">I had some hesitations at first because it seemed almost too easy. I had some issues with my home and wasn't interested in taking out a loan for repairs. I was impressed by the professionalism of HBT throughout the whole process.</p>
+                        <cite class="customer-story-name">Esther H.</cite>
+                        <span class="customer-story-location">Charlotte, NC</span>
                     </article>
                 </div>
             </div>
@@ -313,6 +456,22 @@
                 <figure class="contact-visual">
                     <img src="Images/Home-Buyer-Roof-Lift.gif" alt="Team closing a deal">
                 </figure>
+            </div>
+        </section>
+
+        <section class="section bottom-cta-section" aria-labelledby="bottom-cta-heading">
+            <div class="section-inner bottom-cta-inner">
+                <h2 id="bottom-cta-heading">Get your cash offer in minutes—no obligation</h2>
+                <p class="bottom-cta-lead">Enter your address now. Our team reviews your property and sends a firm offer—often within 24 hours. No agents, no showings, no waiting.</p>
+                <form class="nav-address-form bottom-cta-form" id="bottom-cta-form">
+                    <input type="text" placeholder="Enter your street address" required id="bottom-cta-address-input">
+                    <button type="submit" class="btn-nav-submit">Get Offer</button>
+                </form>
+                <ul class="bottom-cta-trust">
+                    <li>✓ No obligation</li>
+                    <li>✓ Free, no-cost offer</li>
+                    <li>✓ Close on your timeline</li>
+                </ul>
             </div>
         </section>
 

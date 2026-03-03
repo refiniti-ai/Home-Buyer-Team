@@ -8,10 +8,82 @@
     <link rel="icon" type="image/png" href="Images/The-home-buyer-team-favicon.png">
     <style>
         .about-hero {
-            background: linear-gradient(135deg, #06214f, #0f2c6b);
+            background: linear-gradient(135deg, #1a4a6e, #2563a8);
             padding: 9rem 1.5rem 6rem;
             color: white;
             text-align: center;
+        }
+        .team-member-section {
+            position: relative;
+            padding: 5rem 1.5rem 5rem;
+            overflow: hidden;
+        }
+        .team-member-section::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: url('Images/house building.png') center center / cover no-repeat;
+            z-index: 0;
+        }
+        .team-member-section::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(4, 21, 62, 0.85) 0%, rgba(11, 61, 115, 0.75) 100%);
+            z-index: 1;
+        }
+        .team-member-inner {
+            position: relative;
+            z-index: 2;
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+        @media (max-width: 900px) {
+            .team-member-inner {
+                grid-template-columns: 1fr;
+            }
+        }
+        .team-member-bio h2 {
+            color: #fff;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            font-weight: 800;
+        }
+        .team-member-bio p {
+            color: rgba(255, 255, 255, 0.92);
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+        .team-member-bio p:last-child {
+            margin-bottom: 0;
+        }
+        .team-member-photo-placeholder {
+            background: rgba(255, 255, 255, 0.08);
+            border: 6px solid rgba(255, 255, 255, 0.4);
+            border-radius: 8px;
+            aspect-ratio: 4 / 5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 400px;
+        }
+        .team-member-photo-placeholder span {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+        .team-member-photo-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 4px;
         }
         .about-content {
             max-width: 800px;
@@ -73,17 +145,21 @@
                 <a class="nav-link-desktop" href="about.html">About</a>
                 <a class="nav-link-desktop" href="faq.html">FAQ</a>
                 <a class="nav-link-desktop" href="contact.html">Contact</a>
+                <div class="nav-desktop-item">
+                    <button class="nav-link-desktop nav-dropdown-trigger" type="button" aria-expanded="false" aria-haspopup="true">Resources ▾</button>
+                    <div class="nav-desktop-dropdown">
+                        <a class="nav-desktop-dropdown-link" href="equity-audit.html">Equity Audit</a>
+                        <a class="nav-desktop-dropdown-link" href="foreclosure.html">Foreclosure</a>
+                        <a class="nav-desktop-dropdown-link" href="probate.html">Probate</a>
+                        <a class="nav-desktop-dropdown-link" href="divorce.html">Divorce</a>
+                        <a class="nav-desktop-dropdown-link" href="landlord.html">Landlord</a>
+                    </div>
+                </div>
             </div>
             <form class="nav-address-form" id="nav-address-form">
                 <input type="text" placeholder="Enter street address" required id="nav-address-input">
                 <button type="submit" class="btn-nav-submit">Get Offer</button>
             </form>
-
-            <div class="nav-right-actions">
-                <button class="nav-toggle" aria-expanded="false" aria-controls="primary-links" aria-label="Toggle navigation">
-                    <span class="hamburger"></span>
-                </button>
-            </div>
 
             <div class="nav-links" id="primary-links">
                 <button class="nav-close" id="close-nav" aria-label="Close menu">&times;</button>
@@ -94,6 +170,7 @@
                 <div class="nav-item">
                     <button class="nav-link dropdown-toggle" aria-expanded="false">Resources</button>
                     <div class="dropdown-menu">
+                        <a class="dropdown-link" href="equity-audit.html">Equity Audit</a>
                         <a class="dropdown-link" href="foreclosure.html">Foreclosure</a>
                         <a class="dropdown-link" href="probate.html">Probate</a>
                         <a class="dropdown-link" href="divorce.html">Divorce</a>
@@ -106,9 +183,19 @@
     </header>
 
     <main>
-        <section class="about-hero">
-            <div class="section-inner" style="padding: 4rem 1.5rem;">
-                <img src="Images/The-home-buyer-team-logo.png" alt="The Home Buyer Team" style="max-width: 320px; width: 100%; height: auto; display: block; margin: 0 auto;">
+        <section class="team-member-section" aria-labelledby="gavin-meng-heading">
+            <div class="team-member-inner">
+                <div class="team-member-bio">
+                    <h2 id="gavin-meng-heading">Gavin Meng</h2>
+                    <p>Gavin Meng is a Partner and Investor with The Home Buyer Team, focused on purchasing and revitalizing properties throughout the Greater Phoenix area.</p>
+                    <p>Before entering real estate, Gavin built a foundation in psychotherapy and human emotional relations. That background shaped the way he approaches every transaction — with empathy, clarity, and a deep understanding that selling a home is often tied to major life transitions. Whether it's relocation, inherited property, financial pressure, or a home that needs significant repairs, Gavin believes sellers deserve straightforward answers and respectful solutions.</p>
+                    <p>Since 2022, he has been actively acquiring, renovating, and repositioning residential and select commercial properties across Phoenix. His expertise includes creative financing strategies and redevelopment planning, allowing him to structure offers that work in situations where traditional listings may fall short.</p>
+                    <p>Gavin's philosophy is simple: every property has potential, and every homeowner deserves a fair opportunity to move forward. His mission is to transform distressed or underutilized properties into quality homes while making the selling process smooth, transparent, and stress-free.</p>
+                    <p>Through The Home Buyer Team, Gavin also shares his knowledge with other investors, helping them responsibly improve properties in their own markets.</p>
+                </div>
+                <div class="team-member-photo-placeholder">
+                    <span>Gavin Meng — Photo</span>
+                </div>
             </div>
         </section>
 
@@ -144,11 +231,16 @@
             <p>Our commitment to trust and reliability is why we've become one of the most respected home-buying teams in the region. We handle every transaction with the highest industry standards, ensuring a seamless experience tailored to your specific needs.</p>
         </div>
 
-        <section class="section contact-section" style="margin-bottom: 4rem;">
+        <section class="section contact-section">
             <div class="section-inner contact-inner">
                 <div class="contact-copy">
-                    <h2 class="section-title" style="color: white;">Ready to start your next chapter?</h2>
-                    <p style="color: rgba(255,255,255,0.8);">Get a no-obligation cash offer today and see how easy selling your house can be.</p>
+                    <p class="section-title">Ready to start your next chapter?</p>
+                    <p class="section-lead">Get a no-obligation cash offer today and see how easy selling your house can be.</p>
+                    <ul>
+                        <li>📍 Serving Phoenix & nationwide referrals</li>
+                        <li>🕔 Available evenings, weekends, and holidays</li>
+                        <li>📱 Text updates and concierge support</li>
+                    </ul>
                     <button class="btn-primary open-offer" type="button">Get my offer</button>
                 </div>
                 <figure class="contact-visual">
